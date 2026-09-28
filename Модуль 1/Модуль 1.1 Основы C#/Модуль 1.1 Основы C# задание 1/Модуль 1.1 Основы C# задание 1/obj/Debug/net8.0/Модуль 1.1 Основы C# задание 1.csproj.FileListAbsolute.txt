@@ -1,0 +1,14 @@
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\bin\Debug\net8.0\Модуль 1.1 Основы C# задание 1.exe
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\bin\Debug\net8.0\Модуль 1.1 Основы C# задание 1.deps.json
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\bin\Debug\net8.0\Модуль 1.1 Основы C# задание 1.runtimeconfig.json
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\bin\Debug\net8.0\Модуль 1.1 Основы C# задание 1.dll
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\bin\Debug\net8.0\Модуль 1.1 Основы C# задание 1.pdb
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.AssemblyInfoInputs.cache
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.AssemblyInfo.cs
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.csproj.CoreCompileInputs.cache
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.dll
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\refint\Модуль 1.1 Основы C# задание 1.dll
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.pdb
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\Модуль 1.1 Основы C# задание 1.genruntimeconfig.cache
+C:\Users\Артем\Source\Repos\Модуль 1.1 Основы C# задание 1\Модуль 1.1 Основы C# задание 1\obj\Debug\net8.0\ref\Модуль 1.1 Основы C# задание 1.dll
