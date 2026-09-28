@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 1.2 МАССИВЫ, СТРОКИ, ПЕРЕКЛЮЧАТЕЛИ задание 3", "Модуль 1.2 МАССИВЫ, СТРОКИ, ПЕРЕКЛЮЧАТЕЛИ задание 3\Модуль 1.2 МАССИВЫ, СТРОКИ, ПЕРЕКЛЮЧАТЕЛИ задание 3.csproj", "{C0B14715-6696-43B7-AD54-1822F07B6E4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B14715-6696-43B7-AD54-1822F07B6E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B14715-6696-43B7-AD54-1822F07B6E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B14715-6696-43B7-AD54-1822F07B6E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B14715-6696-43B7-AD54-1822F07B6E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2B80473-667B-4128-9C55-C2F180BC3AD9}
+	EndGlobalSection
+EndGlobal

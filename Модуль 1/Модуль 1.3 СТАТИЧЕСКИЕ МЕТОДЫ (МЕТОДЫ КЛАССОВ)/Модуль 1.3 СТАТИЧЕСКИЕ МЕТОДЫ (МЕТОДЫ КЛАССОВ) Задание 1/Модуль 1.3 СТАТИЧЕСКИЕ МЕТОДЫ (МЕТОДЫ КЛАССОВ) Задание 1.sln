@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 1.3 СТАТИЧЕСКИЕ МЕТОДЫ (МЕТОДЫ КЛАССОВ) Задание 1", "Модуль 1.3 СТАТИЧЕСКИЕ МЕТОДЫ (МЕТОДЫ КЛАССОВ) Задание 1\Модуль 1.3 СТАТИЧЕСКИЕ МЕТОДЫ (МЕТОДЫ КЛАССОВ) Задание 1.csproj", "{F1AA2408-5C27-413A-BC1F-9E70738DA094}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1AA2408-5C27-413A-BC1F-9E70738DA094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AA2408-5C27-413A-BC1F-9E70738DA094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AA2408-5C27-413A-BC1F-9E70738DA094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AA2408-5C27-413A-BC1F-9E70738DA094}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B936FE7-EF9F-418A-81CE-5C4467BAB506}
+	EndGlobalSection
+EndGlobal
