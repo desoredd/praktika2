@@ -1,0 +1,14 @@
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\bin\Debug\net8.0\Модуль 2 ООП задача 2.exe
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\bin\Debug\net8.0\Модуль 2 ООП задача 2.deps.json
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\bin\Debug\net8.0\Модуль 2 ООП задача 2.runtimeconfig.json
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\bin\Debug\net8.0\Модуль 2 ООП задача 2.dll
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\bin\Debug\net8.0\Модуль 2 ООП задача 2.pdb
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.AssemblyInfoInputs.cache
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.AssemblyInfo.cs
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.csproj.CoreCompileInputs.cache
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.dll
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\refint\Модуль 2 ООП задача 2.dll
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.pdb
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\Модуль 2 ООП задача 2.genruntimeconfig.cache
+C:\Users\Артем\Source\Repos\Модуль 2 ООП задача 2\Модуль 2 ООП задача 2\obj\Debug\net8.0\ref\Модуль 2 ООП задача 2.dll
