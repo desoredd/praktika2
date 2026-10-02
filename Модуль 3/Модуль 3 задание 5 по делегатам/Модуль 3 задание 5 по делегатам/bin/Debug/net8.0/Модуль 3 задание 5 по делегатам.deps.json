@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Модуль 3 задание 5 по делегатам/1.0.0": {
+        "runtime": {
+          "Модуль 3 задание 5 по делегатам.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Модуль 3 задание 5 по делегатам/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

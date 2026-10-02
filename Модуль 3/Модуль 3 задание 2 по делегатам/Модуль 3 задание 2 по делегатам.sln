@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 3 задание 2 по делегатам", "Модуль 3 задание 2 по делегатам\Модуль 3 задание 2 по делегатам.csproj", "{EE97D7F4-4E9B-4302-B23C-C1476D29C802}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE97D7F4-4E9B-4302-B23C-C1476D29C802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE97D7F4-4E9B-4302-B23C-C1476D29C802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE97D7F4-4E9B-4302-B23C-C1476D29C802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE97D7F4-4E9B-4302-B23C-C1476D29C802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4788FF3D-F109-4EF9-939C-29E4FBD188C8}
+	EndGlobalSection
+EndGlobal

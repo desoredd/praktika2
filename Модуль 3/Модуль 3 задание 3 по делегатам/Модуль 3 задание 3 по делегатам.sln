@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 3 задание 3 по делегатам", "Модуль 3 задание 3 по делегатам\Модуль 3 задание 3 по делегатам.csproj", "{ABD7ADEE-980C-4CD9-BFCF-64A181225127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD7ADEE-980C-4CD9-BFCF-64A181225127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD7ADEE-980C-4CD9-BFCF-64A181225127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD7ADEE-980C-4CD9-BFCF-64A181225127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD7ADEE-980C-4CD9-BFCF-64A181225127}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC21A231-9B03-41D6-903D-5DA21BFDB011}
+	EndGlobalSection
+EndGlobal
