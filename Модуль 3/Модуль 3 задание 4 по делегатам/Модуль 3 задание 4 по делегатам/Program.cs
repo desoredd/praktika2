@@ -94,7 +94,6 @@ class Program
 {
     static void Main()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
         var lib = new Library();
         // Заполнение библиотеки
         lib.Add(new Book("Война и мир", "Лев Толстой", 1869, "Роман"));
