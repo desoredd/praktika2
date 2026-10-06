@@ -65,7 +65,6 @@ class Program
 {
     static void Main()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
         var manager = new TaskManager();
         // Массив доступных обработчиков
         TaskHandler[] handlers = new TaskHandler[]
