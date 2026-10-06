@@ -69,7 +69,6 @@ class Program
     public delegate double AreaCalculator();
     static void Main(string[] args)
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
         // Создаём фигуры
         Figure[] figures =
         {
