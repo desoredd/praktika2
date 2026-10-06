@@ -94,7 +94,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
         // Создаём источник событий
         Notification notification = new Notification();
         // Создаём обработчиков
@@ -121,6 +120,5 @@ class Program
         notification.MessageReceived -= messageHandler.OnMessageReceived;
         notification.SendMessage("Это сообщение уже не увидит SMS-модуль",
                                  NotificationPriority.Low);
-        Console.ReadKey();
     }
 }
