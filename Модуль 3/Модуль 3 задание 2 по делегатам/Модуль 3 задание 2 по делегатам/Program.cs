@@ -59,7 +59,7 @@ public class Notification
 // Подписчики — обработчики событий
 public class MessageHandler
 {
-    public void OnMessageReceived(object sender, NotificationEventArgs e)
+    public void MessageReceived(object sender, NotificationEventArgs e)
     {
         Console.WriteLine($"[SMS-модуль] {e.Timestamp:HH:mm:ss} | Приоритет: {e.Priority}");
         Console.WriteLine($"Текст: {e.Message}");
@@ -67,7 +67,7 @@ public class MessageHandler
 }
 public class CallHandler
 {
-    public void OnCallReceived(object sender, NotificationEventArgs e)
+    public void CallReceived(object sender, NotificationEventArgs e)
     {
         Console.WriteLine($"[Телефон] {e.Timestamp:HH:mm:ss} | Приоритет: {e.Priority}");
         Console.WriteLine($"{e.Message}");
@@ -76,7 +76,7 @@ public class CallHandler
 }
 public class EmailHandler
 {
-    public void OnEmailReceived(object sender, NotificationEventArgs e)
+    public void EmailReceived(object sender, NotificationEventArgs e)
     {
         Console.WriteLine($"[Почта] {e.Timestamp:HH:mm:ss} | Приоритет: {e.Priority}");
         Console.WriteLine($"{e.Message}");
@@ -102,9 +102,9 @@ class Program
         var emailHandler = new EmailHandler();
         var logger = new NotificationLogger();
         // Регистрация обработчиков событий
-        notification.MessageReceived += messageHandler.OnMessageReceived;
-        notification.CallReceived += callHandler.OnCallReceived;
-        notification.EmailReceived += emailHandler.OnEmailReceived;
+        notification.MessageReceived += messageHandler.MessageReceived;
+        notification.CallReceived += callHandler.CallReceived;
+        notification.EmailReceived += emailHandler.EmailReceived;
         // Дополнительные подписчики (логирование)
         notification.MessageReceived += logger.Log;
         notification.CallReceived += logger.Log;
@@ -117,7 +117,7 @@ class Program
         notification.SendMessage("СРОЧНО: отчёт готов?", NotificationPriority.Urgent);
         // Отписка одного из обработчиков
         Console.WriteLine("\nОтписываем SMS-модуль");
-        notification.MessageReceived -= messageHandler.OnMessageReceived;
+        notification.MessageReceived -= messageHandler.MessageReceived;
         notification.SendMessage("Это сообщение уже не увидит SMS-модуль",
                                  NotificationPriority.Low);
     }
