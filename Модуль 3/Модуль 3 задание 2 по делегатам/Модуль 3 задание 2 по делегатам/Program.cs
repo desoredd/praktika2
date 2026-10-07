@@ -42,7 +42,7 @@ public class Notification
         Console.WriteLine($"\nПолучено EMAIL: \"{subject}\"");
         OnEmailReceived(new NotificationEventArgs($"Email: {subject}\n     {body}", priority));
     }
-    // Защищённые методы для вызова событий (паттерн OnXxx)
+    // Защищённые методы для вызова событий 
     protected virtual void OnMessageReceived(NotificationEventArgs e)
     {
         MessageReceived?.Invoke(this, e);
