@@ -101,7 +101,7 @@ class Program
         var callHandler = new CallHandler();
         var emailHandler = new EmailHandler();
         var logger = new NotificationLogger();
-        // === Регистрация обработчиков событий ===
+        // Регистрация обработчиков событий
         notification.MessageReceived += messageHandler.OnMessageReceived;
         notification.CallReceived += callHandler.OnCallReceived;
         notification.EmailReceived += emailHandler.OnEmailReceived;
@@ -109,13 +109,13 @@ class Program
         notification.MessageReceived += logger.Log;
         notification.CallReceived += logger.Log;
         notification.EmailReceived += logger.Log;
-        // === Запуск событий ===
+        // Запуск событий
         Console.WriteLine("СИСТЕМА УВЕДОМЛЕНИЙ");
         notification.SendMessage("Привет! Как дела?", NotificationPriority.Normal);
         notification.MakeCall("+375 (29) 123-45-67");
         notification.SendEmail("Совещание", "Встреча в 15:00 в переговорной №3");
         notification.SendMessage("СРОЧНО: отчёт готов?", NotificationPriority.Urgent);
-        // === Отписка одного из обработчиков ===
+        // Отписка одного из обработчиков
         Console.WriteLine("\nОтписываем SMS-модуль");
         notification.MessageReceived -= messageHandler.OnMessageReceived;
         notification.SendMessage("Это сообщение уже не увидит SMS-модуль",

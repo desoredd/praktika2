@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Модуль 3 задание 5 по делегатам")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b0534dc93333a9abe96fac826e844c2d40fb00e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Модуль 3 задание 5 по делегатам")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Модуль 3 задание 5 по делегатам")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
