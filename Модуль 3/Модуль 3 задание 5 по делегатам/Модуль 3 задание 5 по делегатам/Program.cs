@@ -138,7 +138,7 @@ class Program
             Console.WriteLine();
             if (int.TryParse(choice, out int idx) && idx >= 1 && idx <= sorters.Length)
             {
-                sorters[idx - 1](arr);   // <-- вызов через делегат
+                sorters[idx - 1](arr);   // вызов через делегат
                 Pr(arr);
                 Zap(arr, random);
             }
