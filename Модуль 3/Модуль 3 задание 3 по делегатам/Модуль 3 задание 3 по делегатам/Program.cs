@@ -19,27 +19,27 @@ public class TaskItem
 // Класс менеджера задач
 public class TaskManager
 {
-    private readonly List<TaskItem> _tasks = new List<TaskItem>();
+    private readonly List<TaskItem> tasks = new List<TaskItem>();
     public void AddTask(TaskItem task)
     {
-        _tasks.Add(task);
+        tasks.Add(task);
         Console.WriteLine($"Задача \"{task.Name}\" добавлена.");
     }
     public void ExecuteAll()
     {
-        if (_tasks.Count == 0)
+        if (tasks.Count == 0)
         {
             Console.WriteLine("Список задач пуст.");
             return;
         }
         Console.WriteLine("\nВыполнение задач");
-        foreach (var task in _tasks)
+        foreach (var task in tasks)
         {
             task.Execute();
         }
         Console.WriteLine("Все задачи выполнены\n");
     }
-    public int Count => _tasks.Count;
+    public int Count => tasks.Count;
 }
 // Класс с методами-обработчиками (делегаты)
 public static class Handlers
