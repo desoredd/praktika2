@@ -1,6 +1,6 @@
 ﻿// Объявление делегата для обработки задачи
 public delegate void TaskHandler(string taskName);
-// Класс задачи
+//Класс задачи
 public class TaskItem
 {
     public string Name { get; set; }
