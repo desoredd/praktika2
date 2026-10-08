@@ -1,4 +1,5 @@
-﻿public static class Sort
+
+public static class Sort
 {
     public static void ShelSort<T>(IList<T> list) where T : IComparable
     {
