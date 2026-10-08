@@ -5,11 +5,21 @@
     string GetName();
     
 }
-
 public class Circle : Shape
 {
-
-    public int rad {  get; set; }
+    private int Rad;
+    public int rad 
+    {  get => Rad;
+       set 
+       {
+            if(value <= 0)
+            {
+                Console.WriteLine("Введено некорректное значение радиуса оно будет заменено на 1");
+                value = 1;
+            }
+            Rad = value;
+        }
+    }
     public Circle(int Rad)
     { 
         rad = Rad;
@@ -29,8 +39,34 @@ public class Circle : Shape
 
 public class Rectangle : Shape
 {
-    public int width { get; set; }
-    public int hight { get; set; }
+    private int wid;
+    private int hig;
+    public int width
+    { 
+        get => wid;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное значение ширины оно будет заменено на 1");
+                value = 1;
+            }
+            wid = value;
+        }
+    }
+    public int hight
+    { 
+        get => hig; 
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное значение высоты оно будет заменено на 1");
+                value = 1;
+            }
+            hig = value;
+        }
+    }
     public Rectangle(int Width, int Hight)
     {
         width = Width;
@@ -50,18 +86,63 @@ public class Rectangle : Shape
 }
 public class Triangle : Shape
 {
-    public int a { get; set; }
-    public int b { get; set; }
-    public int c { get; set; }
+    private int x;
+    private int y;
+    private int z;
+    public int a
+    {
+        get => x;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное значение стороны оно будет заменено на 1");
+                value = 1;
+            }
+            x = value;
+        }
+    }
+    public int b
+    {
+        get => y;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное значение стороны оно будет заменено на 1");
+                value = 1;
+            }
+            y = value;
+        }
+    }
+    public int c
+    {
+        get => z;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное значение стороны оно будет заменено на 1");
+                value = 1;
+            }
+            z = value;
+        }
+    }
     public Triangle(int A, int B, int C)
     {
         a = A;
         b = B;
         c = C;
+        if (a + b <= c || a + c <= b || b + c <= a)
+        {
+            Console.WriteLine("Треугольник с такими сторонами не существует, их значение будет заменено на 1");
+            int m = 1;
+            a = b = c = m;
+        }
     }
     public double Area()
     {
-        double p = (a + b + c) / 2;
+        double p = (a + b + c) / 2.0;
         double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         return s;
     }
@@ -81,7 +162,7 @@ class Program
         {
             new Circle(8),
             new Rectangle(5, 6),
-            new Triangle(5, 8, 9)
+            new Triangle(1, 1, 10)
         };
 
         foreach (var shape in shapes)
