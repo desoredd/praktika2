@@ -1,14 +1,60 @@
-﻿public interface Tovar
+﻿using System;
+using System.Collections.Generic;
+public interface Tovar
 {
     double Price();
     string Category();
-    string Numbers();
+    int Numbers();
 }
 public class Voda : Tovar
 {
-    public double price { get; set; }
-    public double amount { get; set; }
-    public int num { get; set; }
+    private double prc;
+    private double dsc;
+    private int cnt;
+    public double price
+    {
+        get => prc;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введена некорректная цена, она будет заменена на 1");
+                value = 1;
+            }
+            prc = value;
+        }
+    }
+    public double amount
+    {
+        get => dsc;
+        set
+        {
+            if (value < 0)
+            {
+                Console.WriteLine("Введена некорректная скидка, она будет заменена на 0");
+                value = 0;
+            }
+            if (value > 100)
+            {
+                Console.WriteLine("Скидка не может быть больше 100%, она будет заменена на 100");
+                value = 100;
+            }
+            dsc = value;
+        }
+    }
+    public int num
+    {
+        get => cnt;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное количество, оно будет заменено на 1");
+                value = 1;
+            }
+            cnt = value;
+        }
+    }
     public Voda(int num, double price, double amount)
     {
         this.num = num;
@@ -20,15 +66,59 @@ public class Voda : Tovar
         double AllPrice = price - (price / 100) * amount;
         return AllPrice;
     }
-    public string Category() => "Напитки";
-    public string Numbers() => num.ToString();
+    public string Category() => "Вода";
+    public int Numbers() => num;
 }
-public class Vodka : Tovar
+public class Sok : Tovar
 {
-    public double price { get; set; }
-    public double amount { get; set; }
-    public int num { get; set; }
-    public Vodka(int num, double price, double amount)
+    private double prc;
+    private double dsc;
+    private int cnt;
+    public double price
+    {
+        get => prc;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введена некорректная цена, она будет заменена на 1");
+                value = 1;
+            }
+            prc = value;
+        }
+    }
+    public double amount
+    {
+        get => dsc;
+        set
+        {
+            if (value < 0)
+            {
+                Console.WriteLine("Введена некорректная скидка, она будет заменена на 0");
+                value = 0;
+            }
+            if (value > 100)
+            {
+                Console.WriteLine("Скидка не может быть больше 100%, она будет заменена на 100");
+                value = 100;
+            }
+            dsc = value;
+        }
+    }
+    public int num
+    {
+        get => cnt;
+        set
+        {
+            if (value <= 0)
+            {
+                Console.WriteLine("Введено некорректное количество, оно будет заменено на 1");
+                value = 1;
+            }
+            cnt = value;
+        }
+    }
+    public Sok(int num, double price, double amount)
     {
         this.num = num;
         this.price = price;
@@ -39,8 +129,8 @@ public class Vodka : Tovar
         double AllPrice = price - (price / 100) * amount;
         return AllPrice;
     }
-    public string Category() => "Напитки";
-    public string Numbers() => num.ToString();
+    public string Category() => "Сок";
+    public int Numbers() => num;
 }
 class Program
 {
@@ -49,15 +139,16 @@ class Program
         var tovars = new List<Tovar>
         {
             new Voda(10, 12.50, 15),
-            new Vodka(2, 15, 20)
+            new Sok(2, 15, 20)
         };
         bool boo = true;
         while (boo)
         {
-            Console.WriteLine("Меню");
+            Console.WriteLine("\nМеню");
             Console.WriteLine("1 - Показать цены");
             Console.WriteLine("2 - Показать количество");
             Console.WriteLine("3 - Добавить товар (Вода)");
+            Console.WriteLine("4 - Добавить товар (Сок)");
             Console.WriteLine("0 - Выход");
             Console.Write("Ваш выбор: ");
             string choice = Console.ReadLine();
@@ -76,26 +167,10 @@ class Program
                     }
                     break;
                 case "3":
-                    Console.Write("Введите колличество: ");
-                    if (!int.TryParse(Console.ReadLine(), out int id))
-                    {
-                        Console.WriteLine("Ошибка: колличество должено быть целым числом.");
-                        break;
-                    }
-                    Console.Write("Введите цену: ");
-                    if (!double.TryParse(Console.ReadLine(), out double price))
-                    {
-                        Console.WriteLine("Ошибка: цена должна быть числом.");
-                        break;
-                    }
-                    Console.Write("Введите скидку (в %): ");
-                    if (!double.TryParse(Console.ReadLine(), out double amount))
-                    {
-                        Console.WriteLine("Ошибка: скидка должна быть числом.");
-                        break;
-                    }
-                    tovars.Add(new Voda(id, price, amount));
-                    Console.WriteLine("Товар успешно добавлен!");
+                    AddTovar(tovars, true);
+                    break;
+                case "4":
+                    AddTovar(tovars, false);
                     break;
                 case "0":
                     boo = false;
@@ -105,6 +180,37 @@ class Program
                     Console.WriteLine("Неизвестная команда. Попробуйте снова.");
                     break;
             }
+        }
+    }
+    static void AddTovar(List<Tovar> tovars, bool isVoda)
+    {
+        Console.Write("Введите количество: ");
+        if (!int.TryParse(Console.ReadLine(), out int id))
+        {
+            Console.WriteLine("Ошибка: количество должно быть целым числом.");
+            return;
+        }
+        Console.Write("Введите цену: ");
+        if (!double.TryParse(Console.ReadLine(), out double price))
+        {
+            Console.WriteLine("Ошибка: цена должна быть числом.");
+            return;
+        }
+        Console.Write("Введите скидку (в %): ");
+        if (!double.TryParse(Console.ReadLine(), out double amount))
+        {
+            Console.WriteLine("Ошибка: скидка должна быть числом.");
+            return;
+        }
+        if (isVoda)
+        {
+            tovars.Add(new Voda(id, price, amount));
+            Console.WriteLine("Вода успешно добавлена!");
+        }
+        else
+        {
+            tovars.Add(new Sok(id, price, amount));
+            Console.WriteLine("Сок успешно добавлен!");
         }
     }
 }
