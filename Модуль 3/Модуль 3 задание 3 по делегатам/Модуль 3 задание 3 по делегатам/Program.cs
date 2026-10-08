@@ -1,6 +1,6 @@
 ﻿// Объявление делегата для обработки задачи
 public delegate void TaskHandler(string taskName);
-// Класс задачи
+//Класс задачи
 public class TaskItem
 {
     public string Name { get; set; }
@@ -126,8 +126,7 @@ class Program
             Console.WriteLine($"{i + 1}. {handlerNames[i]}");
         }
         Console.Write("Ваш выбор: ");
-        if (int.TryParse(Console.ReadLine(), out int idx) &&
-            idx >= 1 && idx <= handlers.Length)
+        if (idx >= 1 && idx <= handlers.Length)
         {
             var task = new TaskItem(name, handlers[idx - 1]);
             manager.AddTask(task);
