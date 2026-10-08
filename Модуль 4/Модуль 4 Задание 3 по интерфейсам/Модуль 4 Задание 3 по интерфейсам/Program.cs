@@ -1,4 +1,4 @@
-﻿// 1. Интерфейс "Студент"
+﻿// 1 Интерфейс "Студент"
 public interface IStudent
 {
     double SredniyBall();          // средний балл
