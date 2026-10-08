@@ -128,7 +128,14 @@ class Program
         while (true)
         {
             if (int.TryParse(Console.ReadLine(), out int value))
+            {
+                if (value <= 0)
+                {
+                    Console.Write("Ошибка. Число должно быть больше нуля. Повторите ввод: ");
+                    continue;
+                }
                 return value;
+            }
             Console.Write("Ошибка. Введите целое число: ");
         }
     }
