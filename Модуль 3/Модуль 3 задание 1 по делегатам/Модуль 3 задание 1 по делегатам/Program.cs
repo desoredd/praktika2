@@ -67,7 +67,7 @@ class Program
 {
     // Объявление делегата для метода вычисления площади
     public delegate double AreaCalculator();
-    static void Main(string[] args)
+    static void Main()
     {
         // Создаём фигуры
         Figure[] figures =
