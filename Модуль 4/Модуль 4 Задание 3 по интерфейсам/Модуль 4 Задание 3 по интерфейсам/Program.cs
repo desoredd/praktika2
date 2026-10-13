@@ -1,12 +1,12 @@
 ﻿// 1 Интерфейс "Студент"
-public interface IStudent
+public interface Student
 {
     double SredniyBall();          // средний балл
     string InformaciyaOKurse();    // информация о курсе
     string Name { get; }           // имя студента
 }
 // 2. Студент 1 курса
-public class Student1Kurs : IStudent
+public class Student1Kurs : Student
 {
     public string Name { get; set; }
     private List<int> ocenki;
@@ -26,7 +26,7 @@ public class Student1Kurs : IStudent
     }
 }
 // 3. Студент 2 курса
-public class Student2Kurs : IStudent
+public class Student2Kurs : Student
 {
     public string Name { get; set; }
     private List<int> ocenki;
@@ -46,7 +46,7 @@ public class Student2Kurs : IStudent
     }
 }
 // 4. Студент 3 курса
-public class Student3Kurs : IStudent
+public class Student3Kurs : Student
 {
     public string Name { get; set; }
     private List<int> ocenki;
@@ -70,7 +70,7 @@ class Program
 {
     static void Main()
     {
-        List<IStudent> students = new List<IStudent>
+        List<Student> students = new List<Student>
         {
             new Student1Kurs("Иван", new List<int> { 8, 5, 7, 8 }),
             new Student2Kurs("Мария", new List<int> { 9, 9, 9, 9 }),
@@ -126,7 +126,7 @@ class Program
                         }
                     }
                     if (!ok) break;
-                    IStudent newStudent = kurs switch
+                    Student newStudent = kurs switch
                     {
                         1 => new Student1Kurs(name, ocenki),
                         2 => new Student2Kurs(name, ocenki),
