@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-public interface Tovar
+﻿public interface Tovar
 {
     double Price();
     string Category();

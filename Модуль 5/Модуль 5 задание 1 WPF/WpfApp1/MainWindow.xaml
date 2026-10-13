@@ -1,0 +1,76 @@
+﻿<Window x:Class="Модуль_5_Задание_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Графический редактор" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="White">
+    <DockPanel>
+        <TabControl DockPanel.Dock="Top" Height="140">
+            <TabItem Header="Фигуры">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" Content="Линия"
+                            Width="120" Height="32" Margin="5" Click="BtnLine_Click"/>
+                    <Button Grid.Row="1" Grid.Column="0" Content="Круг"
+                            Width="120" Height="32" Margin="5" Click="BtnCircle_Click"/>
+                    <Button Grid.Row="0" Grid.Column="1" Content="Прямоугольник"
+                            Width="120" Height="32" Margin="5" Click="BtnRectangle_Click"/>
+                    <Button Grid.Row="1" Grid.Column="1" Content="Карандаш"
+                            Width="120" Height="32" Margin="5" Click="BtnFreehand_Click"/>
+
+                    <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal"
+                                Margin="5" VerticalAlignment="Center">
+                        <Label Content="Цвет:" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cmbColor" Width="120"
+                                  SelectionChanged="CmbColor_SelectionChanged">
+                            <ComboBoxItem Content="Чёрный"     Tag="Black"    IsSelected="True"/>
+                            <ComboBoxItem Content="Красный"    Tag="Red"/>
+                            <ComboBoxItem Content="Синий"      Tag="Blue"/>
+                            <ComboBoxItem Content="Зелёный"    Tag="Green"/>
+                            <ComboBoxItem Content="Жёлтый"     Tag="Yellow"/>
+                            <ComboBoxItem Content="Оранжевый"  Tag="Orange"/>
+                            <ComboBoxItem Content="Фиолетовый" Tag="Purple"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal"
+                                Margin="5" VerticalAlignment="Center">
+                        <Label Content="Толщина:" VerticalAlignment="Center"/>
+                        <TextBox x:Name="numThickness" Width="60" Text="2"
+                                 TextChanged="NumThickness_TextChanged"/>
+                    </StackPanel>
+
+                    <Button Grid.Row="0" Grid.Column="3" Content="Очистить"
+                            Width="130" Height="32" Margin="5" Click="BtnClear_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Справка">
+                <TextBlock Margin="10" TextWrapping="Wrap">
+                    Управление:<LineBreak/>
+                    • Выберите инструмент.<LineBreak/>
+                    • Зажмите ЛКМ и ведите.<LineBreak/>
+                    • Ctrl+Z — отменить последнюю фигуру.
+                </TextBlock>
+            </TabItem>
+        </TabControl>
+
+        <!-- Focusable="True" нужно, чтобы Canvas мог получать клавиатурные события -->
+        <Canvas x:Name="drawCanvas"
+                Background="White"
+                Focusable="True"
+                ClipToBounds="True"
+                MouseDown="Canvas_MouseDown"
+                MouseMove="Canvas_MouseMove"
+                MouseUp="Canvas_MouseUp"/>
+    </DockPanel>
+</Window>
