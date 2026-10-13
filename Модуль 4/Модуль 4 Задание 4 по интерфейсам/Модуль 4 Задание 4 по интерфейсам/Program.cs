@@ -6,7 +6,7 @@ public interface Book
     void Vydat();                  
     string Info();           
 }
-// 2. Учебник — явно реализует Book
+// 2. Учебник — реализует Book
 public class Uchebnik : Book
 {
     public string Nazvanie { get; set; }
@@ -31,7 +31,7 @@ public class Uchebnik : Book
     }
     public string Info() => $"Учебник по предмету: {predmet}";
 }
-// 3. Роман — явно реализует IBook
+// 3. Роман — реализует Book
 public class Roman : Book
 {
     public string Nazvanie { get; set; }
@@ -56,7 +56,7 @@ public class Roman : Book
     }
     public string Info() => $"Роман автора: {avtor}";
 }
-// 4. Журнал — явно реализует IBook
+// 4. Журнал — реализует IBook
 public class Zhurnal : Book
 {
     public string Nazvanie { get; set; }

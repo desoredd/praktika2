@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Модуль 4 Задание 5 по интерфейсам")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcd193977c2a902c0339acf9ecc24ed88d688bba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99a676cdf73bb34a9b2aaec1e4f230c7566005a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Модуль 4 Задание 5 по интерфейсам")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Модуль 4 Задание 5 по интерфейсам")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

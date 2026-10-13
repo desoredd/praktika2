@@ -5,7 +5,7 @@ public interface IStudent
     string InformaciyaOKurse();    // информация о курсе
     string Name { get; }           // имя студента
 }
-// 2. Студент 1 курса — реализует IStudent
+// 2. Студент 1 курса
 public class Student1Kurs : IStudent
 {
     public string Name { get; set; }
@@ -25,7 +25,7 @@ public class Student1Kurs : IStudent
         return $"{Name} учится на 1 курсе. Предметы: Математика, Физика, Информатика.";
     }
 }
-// 3. Студент 2 курса — реализует IStudent
+// 3. Студент 2 курса
 public class Student2Kurs : IStudent
 {
     public string Name { get; set; }
@@ -45,7 +45,7 @@ public class Student2Kurs : IStudent
         return $"{Name} учится на 2 курсе. Предметы: Алгоритмы, Базы данных, ООП.";
     }
 }
-// 4. Студент 3 курса — реализует IStudent
+// 4. Студент 3 курса
 public class Student3Kurs : IStudent
 {
     public string Name { get; set; }
