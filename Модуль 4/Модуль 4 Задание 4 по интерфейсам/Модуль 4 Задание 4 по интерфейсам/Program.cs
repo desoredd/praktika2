@@ -56,7 +56,7 @@ public class Roman : Book
     }
     public string Info() => $"Роман автора: {avtor}";
 }
-// 4. Журнал — реализует IBook
+// 4. Журнал — реализует Book
 public class Zhurnal : Book
 {
     public string Nazvanie { get; set; }
