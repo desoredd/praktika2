@@ -1,10 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-
 using WpfColor = System.Windows.Media.Color;
 using WpfColors = System.Windows.Media.Colors;
-
 namespace TextEditorApp
 {
     public partial class FontDialogWindow : Window
@@ -14,28 +12,22 @@ namespace TextEditorApp
         public FontWeight SelectedFontWeight { get; private set; }
         public FontStyle SelectedFontStyle { get; private set; }
         public WpfColor SelectedColor { get; private set; }
-
         public FontDialogWindow(FontFamily family, double size,
                                 FontWeight weight, FontStyle style, WpfColor color)
         {
             InitializeComponent();
-
             SelectedFontFamily = family;
             SelectedFontSize = size;
             SelectedFontWeight = weight;
             SelectedFontStyle = style;
             SelectedColor = color;
-
             foreach (var ff in Fonts.SystemFontFamilies)
                 cmbFont.Items.Add(ff.Source);
-
             double[] sizes = { 8, 9, 10, 11, 12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 72 };
             foreach (var s in sizes)
                 cmbSize.Items.Add(s);
-
             cmbFont.SelectedItem = family.Source;
             cmbSize.Text = size.ToString();
-
             if (weight == FontWeights.Bold && style == FontStyles.Italic)
                 cmbStyle.SelectedIndex = 3;
             else if (weight == FontWeights.Bold)
@@ -44,7 +36,6 @@ namespace TextEditorApp
                 cmbStyle.SelectedIndex = 1;
             else
                 cmbStyle.SelectedIndex = 0;
-
             cmbColor.SelectedIndex = 0;
             foreach (ComboBoxItem item in cmbColor.Items)
             {
@@ -61,21 +52,18 @@ namespace TextEditorApp
 
             UpdatePreview();
         }
-
         private void CmbFont_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbFont.SelectedItem is string name)
                 SelectedFontFamily = new FontFamily(name);
             UpdatePreview();
         }
-
         private void CmbSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (double.TryParse(cmbSize.Text, out double s) && s > 0)
                 SelectedFontSize = s;
             UpdatePreview();
         }
-
         private void CmbStyle_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             switch (cmbStyle.SelectedIndex)
@@ -87,7 +75,6 @@ namespace TextEditorApp
             }
             UpdatePreview();
         }
-
         private void CmbColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbColor.SelectedItem is ComboBoxItem item && item.Tag is string tag)
@@ -97,7 +84,6 @@ namespace TextEditorApp
             }
             UpdatePreview();
         }
-
         private void UpdatePreview()
         {
             if (txtPreview == null) return;
@@ -107,13 +93,11 @@ namespace TextEditorApp
             txtPreview.FontStyle = SelectedFontStyle;
             txtPreview.Foreground = new SolidColorBrush(SelectedColor);
         }
-
         private void BtnOk_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
             Close();
         }
-
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
