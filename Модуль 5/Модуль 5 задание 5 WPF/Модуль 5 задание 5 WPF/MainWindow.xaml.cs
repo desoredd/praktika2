@@ -1,8 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using Модуль_5_задание_5_WPF;
-
 namespace _8
 {
     public partial class MainWindow : Window
@@ -11,30 +9,26 @@ namespace _8
         {
             InitializeComponent();
         }
-
-        // ---------- Цифры ----------
+        // Цифры
         private void BtnDigit_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as Button;
             if (btn == null) return;
             textBox1.AppendText(btn.Content.ToString());
         }
-
-        // ---------- Операции ----------
+        // Операции
         private void BtnOp_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as Button;
             if (btn == null || btn.Tag == null) return;
             Class1.Op(textBox1, btn.Tag.ToString());
         }
-
-        // ---------- Запятая ----------
+        // Запятая
         private void BtnZap_Click(object sender, RoutedEventArgs e)
         {
             Class1.zap(textBox1);
         }
-
-        // ---------- Специальные операции ----------
+        // Специальные операции
         private void BtnCl_Click(object sender, RoutedEventArgs e) => Class1.Cl(textBox1);
         private void BtnDel_Click(object sender, RoutedEventArgs e) => Class1.Del(textBox1);
         private void BtnReverse_Click(object sender, RoutedEventArgs e) => Class1.Reverse(textBox1);
