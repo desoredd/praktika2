@@ -3,11 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E832CE0C-591A-4CBB-90C3-6BBF0250B24F}|\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF.csproj|C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\.vs\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\v17\\DocumentLayout.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E832CE0C-591A-4CBB-90C3-6BBF0250B24F}|\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u043C\u043E\u0434\u0443\u043B\u044C 5\\\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E832CE0C-591A-4CBB-90C3-6BBF0250B24F}|\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF.csproj|solutionrelative:\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E832CE0C-591A-4CBB-90C3-6BBF0250B24F}|\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF.csproj|c:\\users\\\u0430\u0440\u0442\u0435\u043C\\desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u043C\u043E\u0434\u0443\u043B\u044C 5\\\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\fontdialogwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E832CE0C-591A-4CBB-90C3-6BBF0250B24F}|\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF.csproj|C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\fontdialogwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E832CE0C-591A-4CBB-90C3-6BBF0250B24F}|\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF.csproj|solutionrelative:\u043C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 wpf\\fontdialogwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +41,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "DocumentLayout.json",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\.vs\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\v17\\DocumentLayout.json",
+              "RelativeDocumentMoniker": "..\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\.vs\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\v17\\DocumentLayout.json",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\.vs\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\v17\\DocumentLayout.json",
+              "RelativeToolTip": "..\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\.vs\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 1 WPF\\v17\\DocumentLayout.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-13T10:52:53.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FontDialogWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml.cs",
               "RelativeDocumentMoniker": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml.cs",
@@ -46,36 +62,33 @@
               "RelativeToolTip": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-12T09:35:37.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-12T09:35:37.954Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FontDialogWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml",
               "RelativeDocumentMoniker": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml",
               "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml",
               "RelativeToolTip": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\FontDialogWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-12T09:34:56.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-12T09:34:56.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\MainWindow.xaml",
               "RelativeToolTip": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-12T09:31:15.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-12T09:31:15.273Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0435\u043C\\Desktop\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u04302\\\u041C\u043E\u0434\u0443\u043B\u044C 5\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "\u041C\u043E\u0434\u0443\u043B\u044C 5 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 2 WPF\\MainWindow.xaml.cs",

@@ -3,23 +3,19 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-
 namespace Модуль_5_задание_3
 {
     public partial class MainWindow : Window
     {
         private ObservableCollection<TaskItem> tasks = new ObservableCollection<TaskItem>();
-
         public MainWindow()
         {
             InitializeComponent();
             lstTasks.ItemsSource = tasks;
             RefreshStatus();
         }
-
-        // ---------- Добавить ----------
+        // Добавить
         private void BtnAdd_Click(object sender, RoutedEventArgs e) => AddTask();
-
         private void TxtInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -28,7 +24,6 @@ namespace Модуль_5_задание_3
                 e.Handled = true;
             }
         }
-
         private void AddTask()
         {
             string text = txtInput.Text.Trim();
@@ -39,13 +34,10 @@ namespace Модуль_5_задание_3
             txtInput.Focus();
             RefreshStatus();
         }
-
-        // ---------- Удалить ----------
+        // Удалить
         private void BtnDelete_Click(object sender, RoutedEventArgs e) => DeleteSelected();
-
         private void DeleteSelected()
         {
-            // C# 7.3-совместимая проверка
             TaskItem item = lstTasks.SelectedItem as TaskItem;
             if (item == null)
             {
@@ -53,33 +45,26 @@ namespace Модуль_5_задание_3
                     "Ничего не выбрано", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-
             var r = MessageBox.Show(
                 "Удалить задачу «" + item.Text + "»?",
                 "Подтверждение",
                 MessageBoxButton.YesNo, MessageBoxImage.Question);
-
             if (r == MessageBoxResult.Yes)
             {
                 tasks.Remove(item);
                 RefreshStatus();
             }
         }
-
-        // ---------- Отметить выполненной ----------
+        // Отметить выполненной
         private void BtnToggle_Click(object sender, RoutedEventArgs e) => ToggleSelected();
-
         private void ToggleSelected()
         {
-            // C# 7.3-совместимая проверка
             TaskItem item = lstTasks.SelectedItem as TaskItem;
             if (item == null) return;
-
             item.Done = !item.Done;
             RefreshStatus();
         }
-
-        // ---------- Очистить выполненные ----------
+        // Очистить выполненные
         private void BtnClearDone_Click(object sender, RoutedEventArgs e)
         {
             int removed = 0;
@@ -91,7 +76,6 @@ namespace Модуль_5_задание_3
                     removed++;
                 }
             }
-
             if (removed == 0)
             {
                 MessageBox.Show("Выполненных задач нет.",
@@ -100,27 +84,23 @@ namespace Модуль_5_задание_3
             }
             RefreshStatus();
         }
-
-        // ---------- Обновить статус ----------
+        // Обновить статус
         private void RefreshStatus()
         {
             int total = tasks.Count;
             int done = 0;
             foreach (var t in tasks)
                 if (t.Done) done++;
-
             lblStatus.Text = string.Format(
                 "Всего: {0}   |   Выполнено: {1}   |   Осталось: {2}",
                 total, done, total - done);
         }
-
-        // ---------- Двойной клик по списку ----------
+        // Двойной клик по списку
         private void LstTasks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ToggleSelected();
         }
-
-        // ---------- Горячие клавиши в списке ----------
+        // Горячие клавиши в списке
         private void LstTasks_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Delete)
@@ -135,13 +115,11 @@ namespace Модуль_5_задание_3
             }
         }
     }
-
-    // ---------- Модель задачи ----------
+    // Модель задачи
     public class TaskItem : INotifyPropertyChanged
     {
         private string _text;
         private bool _done;
-
         public string Text
         {
             get { return _text; }
@@ -152,7 +130,6 @@ namespace Модуль_5_задание_3
                 OnPropertyChanged("DisplayText");
             }
         }
-
         public bool Done
         {
             get { return _done; }
@@ -163,18 +140,15 @@ namespace Модуль_5_задание_3
                 OnPropertyChanged("DisplayText");
             }
         }
-
         public string DisplayText
         {
             get { return (Done ? "✔ " : "☐ ") + Text; }
         }
-
         public TaskItem(string text)
         {
             _text = text;
             _done = false;
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string name)
         {
