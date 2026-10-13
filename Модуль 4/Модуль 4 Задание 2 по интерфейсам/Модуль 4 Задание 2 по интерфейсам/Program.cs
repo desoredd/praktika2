@@ -1,4 +1,5 @@
 public interface Tovar
+
 {
     double Price();
     string Category();
