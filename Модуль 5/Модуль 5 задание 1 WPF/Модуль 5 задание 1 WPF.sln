@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36915.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 6 задание 1", "WpfApp1\Модуль 6 задание 1.csproj", "{06C1F3C4-0918-4A0A-B244-AF50680868E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Модуль 5 задание 1", "WpfApp1\Модуль 5 задание 1.csproj", "{06C1F3C4-0918-4A0A-B244-AF50680868E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

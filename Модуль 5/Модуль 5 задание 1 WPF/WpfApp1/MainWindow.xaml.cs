@@ -31,7 +31,7 @@ namespace Модуль_5_Задание_1
             KeyDown += MainWindow_KeyDown;
         }
 
-        // ---------- инструменты ----------
+        // инструменты
         private void BtnLine_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Line;
         private void BtnCircle_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Circle;
         private void BtnRectangle_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Rectangle;
@@ -63,7 +63,7 @@ namespace Модуль_5_Задание_1
             previewShape = null;
         }
 
-        // ---------- МЫШЬ ----------
+        // МЫШЬ 
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton != MouseButtonState.Pressed) return;
@@ -81,8 +81,6 @@ namespace Модуль_5_Задание_1
 
             if (currentType == ShapeType.Freehand)
                 current.Points.Add(pt);
-
-            // КЛЮЧЕВОЙ МОМЕНТ: захватываем мышь на Canvas,
             // чтобы MouseMove и MouseUp приходили сюда, даже если курсор вышел за пределы
             drawCanvas.CaptureMouse();
             drawCanvas.Focus();
@@ -134,7 +132,7 @@ namespace Модуль_5_Задание_1
             e.Handled = true;
         }
 
-        // ---------- предпросмотр ----------
+        // предпросмотр
         private void ShowPreview()
         {
             RemovePreview();
@@ -164,7 +162,7 @@ namespace Модуль_5_Задание_1
                 drawCanvas.Children.Add(wpfShape);
         }
 
-        // ---------- Ctrl+Z ----------
+        // Ctrl+Z
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Z && Keyboard.Modifiers == ModifierKeys.Control)
