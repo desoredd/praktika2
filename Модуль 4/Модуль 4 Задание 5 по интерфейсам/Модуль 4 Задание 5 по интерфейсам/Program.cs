@@ -1,5 +1,5 @@
 ﻿// 1. Интерфейс "Рисунок"
-public interface IRisunok
+public interface Risunok
 {
     void Linia(int x1, int y1, int x2, int y2);
     void Krug(int x, int y, int radius);
@@ -7,14 +7,14 @@ public interface IRisunok
     void Pokazat();   // показать всё, что нарисовано
     void Ochistit();  // очистить холст
 }
-// 2. Класс "Холст" — реализует интерфейс IRisunok
-public class Holst : IRisunok
+// 2. Класс "Холст"
+public class Holst : Risunok
 {
     // Журнал всех нарисованных фигур
     private List<string> figury = new List<string>();
     public void Linia(int x1, int y1, int x2, int y2)
     {
-        figury.Add($"Линия: ({x1},{y1}) → ({x2},{y2})");
+        figury.Add($"Линия: ({x1},{y1}) - ({x2},{y2})");
         Console.WriteLine($"Нарисована линия от ({x1},{y1}) до ({x2},{y2})");
     }
     public void Krug(int x, int y, int radius)
@@ -44,7 +44,7 @@ public class Holst : IRisunok
             Console.WriteLine("Холст пуст.");
             return;
         }
-        Console.WriteLine("\n=== Содержимое холста ===");
+        Console.WriteLine("\nСодержимое холста");
         for (int i = 0; i < figury.Count; i++)
             Console.WriteLine($"{i + 1}. {figury[i]}");
         Console.WriteLine($"Всего фигур: {figury.Count}");
@@ -61,7 +61,7 @@ class Program
     static void Main()
     {
         // Используем интерфейсную переменную — это полиморфизм
-        IRisunok holst = new Holst();
+        Risunok holst = new Holst();
         bool run = true;
         while (run)
         {
