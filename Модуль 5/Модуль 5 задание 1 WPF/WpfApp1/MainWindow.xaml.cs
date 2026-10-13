@@ -5,12 +5,10 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
-
 using WpfColor = System.Windows.Media.Color;
 using WpfColors = System.Windows.Media.Colors;
 using WpfPoint = System.Windows.Point;
 using WpfRect = System.Windows.Rect;
-
 namespace Модуль_5_Задание_1
 {
     public partial class MainWindow : Window
@@ -18,25 +16,20 @@ namespace Модуль_5_Задание_1
         private List<Shape> shapes = new List<Shape>();
         private Shape current = null;
         private ShapeType currentType = ShapeType.Line;
-
         private WpfColor currentColor = WpfColors.Black;
         private double currentThickness = 2;
-
         // Отдельный Shape-объект для "предпросмотра", чтобы не путать с shapes
         private System.Windows.Shapes.Shape previewShape = null;
-
         public MainWindow()
         {
             InitializeComponent();
             KeyDown += MainWindow_KeyDown;
         }
-
         // инструменты
         private void BtnLine_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Line;
         private void BtnCircle_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Circle;
         private void BtnRectangle_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Rectangle;
         private void BtnFreehand_Click(object sender, RoutedEventArgs e) => currentType = ShapeType.Freehand;
-
         private void CmbColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbColor.SelectedItem is ComboBoxItem item && item.Tag is string colorName)
@@ -45,7 +38,6 @@ namespace Модуль_5_Задание_1
                 catch { currentColor = WpfColors.Black; }
             }
         }
-
         private void NumThickness_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (double.TryParse(numThickness.Text, out double val))
@@ -55,21 +47,17 @@ namespace Модуль_5_Задание_1
                 currentThickness = val;
             }
         }
-
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
             shapes.Clear();
             drawCanvas.Children.Clear();
             previewShape = null;
         }
-
         // МЫШЬ 
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton != MouseButtonState.Pressed) return;
-
             WpfPoint pt = e.GetPosition(drawCanvas);
-
             current = new Shape
             {
                 Type = currentType,
@@ -78,37 +66,28 @@ namespace Модуль_5_Задание_1
                 Color = currentColor,
                 Thickness = currentThickness
             };
-
             if (currentType == ShapeType.Freehand)
                 current.Points.Add(pt);
             // чтобы MouseMove и MouseUp приходили сюда, даже если курсор вышел за пределы
             drawCanvas.CaptureMouse();
             drawCanvas.Focus();
-
             ShowPreview();
             e.Handled = true;
         }
-
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (current == null) return;
-
             WpfPoint pt = e.GetPosition(drawCanvas);
-
             if (current.Type == ShapeType.Freehand)
                 current.Points.Add(pt);
             else
                 current.End = pt;
-
             ShowPreview();
         }
-
         private void Canvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
             if (current == null) return;
-
             WpfPoint pt = e.GetPosition(drawCanvas);
-
             if (current.Type == ShapeType.Freehand)
             {
                 current.Points.Add(pt);
@@ -121,28 +100,22 @@ namespace Модуль_5_Задание_1
                 if (current.Start != current.End)
                     CommitCurrent();
             }
-
             // Освобождаем мышь
             drawCanvas.ReleaseMouseCapture();
-
             // Убираем предпросмотр, если фигура не была добавлена
             RemovePreview();
-
             current = null;
             e.Handled = true;
         }
-
         // предпросмотр
         private void ShowPreview()
         {
             RemovePreview();
             if (current == null) return;
-
             previewShape = current.CreateWpfShape();
             if (previewShape != null)
                 drawCanvas.Children.Add(previewShape);
         }
-
         private void RemovePreview()
         {
             if (previewShape != null)
@@ -151,17 +124,14 @@ namespace Модуль_5_Задание_1
                 previewShape = null;
             }
         }
-
         private void CommitCurrent()
         {
             RemovePreview();
-
             shapes.Add(current);
             var wpfShape = current.CreateWpfShape();
             if (wpfShape != null)
                 drawCanvas.Children.Add(wpfShape);
         }
-
         // Ctrl+Z
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
         {
@@ -178,9 +148,7 @@ namespace Модуль_5_Задание_1
             }
         }
     }
-
     public enum ShapeType { Line, Circle, Rectangle, Freehand }
-
     public class Shape
     {
         public ShapeType Type;
@@ -188,13 +156,10 @@ namespace Модуль_5_Задание_1
         public WpfPoint End;
         public WpfColor Color;
         public double Thickness;
-
         public List<WpfPoint> Points = new List<WpfPoint>();
-
         public System.Windows.Shapes.Shape CreateWpfShape()
         {
             var brush = new SolidColorBrush(Color);
-
             switch (Type)
             {
                 case ShapeType.Line:
@@ -207,7 +172,6 @@ namespace Модуль_5_Задание_1
                         Stroke = brush,
                         StrokeThickness = Thickness
                     };
-
                 case ShapeType.Circle:
                     var rect = MakeSquare(Start, End);
                     var ellipse = new Ellipse
@@ -220,7 +184,6 @@ namespace Модуль_5_Задание_1
                     ellipse.Width = rect.Width;
                     ellipse.Height = rect.Height;
                     return ellipse;
-
                 case ShapeType.Rectangle:
                     var r = MakeRect(Start, End);
                     var rectangle = new Rectangle
@@ -233,7 +196,6 @@ namespace Модуль_5_Задание_1
                     rectangle.Width = r.Width;
                     rectangle.Height = r.Height;
                     return rectangle;
-
                 case ShapeType.Freehand:
                     if (Points.Count == 1)
                     {
@@ -265,7 +227,6 @@ namespace Модуль_5_Задание_1
             }
             return null;
         }
-
         public static WpfRect MakeRect(WpfPoint a, WpfPoint b)
         {
             double x = Math.Min(a.X, b.X);
@@ -274,16 +235,13 @@ namespace Модуль_5_Задание_1
             double h = Math.Abs(a.Y - b.Y);
             return new WpfRect(x, y, w, h);
         }
-
         public static WpfRect MakeSquare(WpfPoint a, WpfPoint b)
         {
             double dx = b.X - a.X;
             double dy = b.Y - a.Y;
             double side = Math.Max(Math.Abs(dx), Math.Abs(dy));
-
             double x = dx >= 0 ? a.X : a.X - side;
             double y = dy >= 0 ? a.Y : a.Y - side;
-
             return new WpfRect(x, y, side, side);
         }
     }
