@@ -17,7 +17,6 @@ namespace Модуль_5_задание_5_WPF
             if (string.IsNullOrWhiteSpace(textBox.Text)) return;
 
             string input = textBox.Text;
-
             // Если последний символ — уже оператор, заменяем его
             char last = input[input.Length - 1];
             if (last == '+' || last == '-' || last == '*' || last == '/')
