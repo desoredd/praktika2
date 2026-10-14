@@ -1,4 +1,4 @@
-﻿<Window x:Class="Модуль_5_Задание_1.MainWindow"
+﻿<Window x:Class="WpfApp1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Графический редактор" Height="600" Width="800"
@@ -20,13 +20,13 @@
                     </Grid.ColumnDefinitions>
 
                     <Button Grid.Row="0" Grid.Column="0" Content="Линия"
-                            Width="120" Height="32" Margin="5" Click="BtnLine_Click"/>
+                            Width="120" Height="32" Margin="5" Click="LineButton_Click"/>
                     <Button Grid.Row="1" Grid.Column="0" Content="Круг"
-                            Width="120" Height="32" Margin="5" Click="BtnCircle_Click"/>
+                            Width="120" Height="32" Margin="5" Click="CircleButton_Click"/>
                     <Button Grid.Row="0" Grid.Column="1" Content="Прямоугольник"
-                            Width="120" Height="32" Margin="5" Click="BtnRectangle_Click"/>
+                            Width="120" Height="32" Margin="5" Click="RectangleButton_Click"/>
                     <Button Grid.Row="1" Grid.Column="1" Content="Карандаш"
-                            Width="120" Height="32" Margin="5" Click="BtnFreehand_Click"/>
+                            Width="120" Height="32" Margin="5" Click="FreehandButton_Click"/>
 
                     <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal"
                                 Margin="5" VerticalAlignment="Center">
@@ -51,26 +51,24 @@
                     </StackPanel>
 
                     <Button Grid.Row="0" Grid.Column="3" Content="Очистить"
-                            Width="130" Height="32" Margin="5" Click="BtnClear_Click"/>
+                            Width="130" Height="32" Margin="5" Click="ClearButton_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Справка">
                 <TextBlock Margin="10" TextWrapping="Wrap">
                     Управление:<LineBreak/>
                     • Выберите инструмент.<LineBreak/>
-                    • Зажмите ЛКМ и ведите.<LineBreak/>
-                    • Ctrl+Z — отменить последнюю фигуру.
+                    • Зажмите ЛКМ и ведите.
                 </TextBlock>
             </TabItem>
         </TabControl>
 
-        <!-- Focusable="True" нужно, чтобы Canvas мог получать клавиатурные события -->
         <Canvas x:Name="drawCanvas"
                 Background="White"
                 Focusable="True"
                 ClipToBounds="True"
-                MouseDown="Canvas_MouseDown"
-                MouseMove="Canvas_MouseMove"
-                MouseUp="Canvas_MouseUp"/>
+                MouseDown="DrawCanvas_MouseDown"
+                MouseMove="DrawCanvas_MouseMove"
+                MouseUp="DrawCanvas_MouseUp"/>
     </DockPanel>
 </Window>
