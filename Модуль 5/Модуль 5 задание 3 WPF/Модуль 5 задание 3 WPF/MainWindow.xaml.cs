@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 namespace Модуль_5_задание_3
 {
@@ -142,7 +141,7 @@ namespace Модуль_5_задание_3
         }
         public string DisplayText
         {
-            get { return (Done ? "✔ " : "☐ ") + Text; }
+            get { return (Done ? "+ " : "- ") + Text; }
         }
         public TaskItem(string text)
         {
