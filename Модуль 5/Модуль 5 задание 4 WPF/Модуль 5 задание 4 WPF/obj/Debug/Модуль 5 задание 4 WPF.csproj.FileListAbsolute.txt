@@ -12,3 +12,18 @@ C:\Users\Артем\Source\Repos\Модуль 5 задание 4 WPF\Модул�
 C:\Users\Артем\Source\Repos\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.csproj.CoreCompileInputs.cache
 C:\Users\Артем\Source\Repos\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.exe
 C:\Users\Артем\Source\Repos\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.pdb
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\bin\Debug\Модуль 5 задание 4 WPF.exe.config
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\bin\Debug\Модуль 5 задание 4 WPF.exe
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\bin\Debug\Модуль 5 задание 4 WPF.pdb
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.csproj.AssemblyReference.cache
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.exe.config
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\MainWindow.baml
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\App.g.cs
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF_MarkupCompile.cache
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.g.resources
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль_5_задание_4_WPF.Properties.Resources.resources
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.csproj.GenerateResource.cache
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.csproj.CoreCompileInputs.cache
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.exe
+C:\Users\Артем\Desktop\практика2\Модуль 5\Модуль 5 задание 4 WPF\Модуль 5 задание 4 WPF\obj\Debug\Модуль 5 задание 4 WPF.pdb

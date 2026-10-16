@@ -3,8 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Просмотр изображений" Height="620" Width="900"
         MinHeight="400" MinWidth="500"
-        WindowStartupLocation="CenterScreen"
-        KeyDown="Window_KeyDown">
+        WindowStartupLocation="CenterScreen">
     <DockPanel>
         <!-- Меню -->
         <Menu DockPanel.Dock="Top">

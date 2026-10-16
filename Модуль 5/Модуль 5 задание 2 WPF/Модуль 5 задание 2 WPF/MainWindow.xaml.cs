@@ -1,91 +1,62 @@
-﻿using System;
-using System.IO;
-using System.Windows;
-using System.Windows.Documents;
-using System.Windows.Media;
-using Microsoft.Win32;
-using WpfColor = System.Windows.Media.Color;
+﻿using System.Windows;
 using WpfColors = System.Windows.Media.Colors;
+
 namespace TextEditorApp
 {
     public partial class MainWindow : Window
     {
+        private readonly FileService _fileService = new FileService();
+        private EditorService _editorService;
         public MainWindow()
         {
             InitializeComponent();
+            _editorService = new EditorService(richTextBox);
         }
-        // Открыть файл
+        // Открыть
         private void BtnOpen_Click(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog
-            {
-                Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*",
-                Title = "Выберите текстовый файл для открытия"
-            };
-            if (openFileDialog.ShowDialog() == true)
-            {
-                try
-                {
-                    string text = File.ReadAllText(openFileDialog.FileName);
-                    richTextBox.Document.Blocks.Clear();
-                    richTextBox.Document.Blocks.Add(new Paragraph(new Run(text)));
+            if (_editorService == null) return;
 
-                    MessageBox.Show("Файл успешно прочитан!", "Успех",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при чтении файла: {ex.Message}", "Ошибка",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
+            string text = _fileService.OpenFile();
+            if (text == null) return;
+
+            _editorService.SetText(text);
+
+            MessageBox.Show("Файл успешно прочитан!", "Успех",
+                MessageBoxButton.OK, MessageBoxImage.Information);
         }
-        // Сохранить файл
+        // Сохранить
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            var saveFileDialog = new SaveFileDialog
+            if (_editorService == null) return;
+
+            string text = _editorService.GetText();
+
+            if (_fileService.SaveFile(text))
             {
-                Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*",
-                Title = "Сохранить файл как...",
-                DefaultExt = "txt"
-            };
-            if (saveFileDialog.ShowDialog() == true)
-            {
-                try
-                {
-                    // Получаем весь текст из RichTextBox через TextRange
-                    TextRange range = new TextRange(
-                        richTextBox.Document.ContentStart,
-                        richTextBox.Document.ContentEnd);
-                    File.WriteAllText(saveFileDialog.FileName, range.Text);
-                    MessageBox.Show("Файл успешно сохранён!", "Успех",
-                        MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка при сохранении файла: {ex.Message}", "Ошибка",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                MessageBox.Show("Файл успешно сохранён!", "Успех",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-        // Настройка шрифта
+        // Шрифт
         private void BtnFont_Click(object sender, RoutedEventArgs e)
         {
-            // Используем простой самодельный диалог выбора шрифта и цвета.
+            if (_editorService == null) return;
             var dialog = new FontDialogWindow(
-                richTextBox.FontFamily,
-                richTextBox.FontSize,
-                richTextBox.FontWeight,
-                richTextBox.FontStyle,
-                (richTextBox.Foreground as SolidColorBrush)?.Color ?? WpfColors.Black);
+                _editorService.CurrentFontFamily,
+                _editorService.CurrentFontSize,
+                _editorService.CurrentFontWeight,
+                _editorService.CurrentFontStyle,
+                _editorService.CurrentColor);
             dialog.Owner = this;
             if (dialog.ShowDialog() == true)
             {
-                richTextBox.FontFamily = dialog.SelectedFontFamily;
-                richTextBox.FontSize = dialog.SelectedFontSize;
-                richTextBox.FontWeight = dialog.SelectedFontWeight;
-                richTextBox.FontStyle = dialog.SelectedFontStyle;
-                richTextBox.Foreground = new SolidColorBrush(dialog.SelectedColor);
+                _editorService.ApplyFont(
+                    dialog.SelectedFontFamily,
+                    dialog.SelectedFontSize,
+                    dialog.SelectedFontWeight,
+                    dialog.SelectedFontStyle,
+                    dialog.SelectedColor);
             }
         }
     }
