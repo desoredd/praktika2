@@ -1,0 +1,38 @@
+﻿<Window x:Class="Модуль_6_Задание_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сотрудники" Height="450" Width="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Добавление -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Имя:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="NameTextBox" Width="150" Margin="0,0,10,0"/>
+            <TextBlock Text="Должность:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="DolwnostTextBox" Width="150" Margin="0,0,10,0"/>
+            <Button Content="Добавить" Width="100" Click="AddButton_Click"/>
+        </StackPanel>
+
+        <!-- Удаление -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Имя для удаления:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBox x:Name="RemoveNameTextBox" Width="150" Margin="0,0,10,0"/>
+            <Button Content="Удалить" Width="100" Click="RemoveButton_Click"/>
+        </StackPanel>
+
+        <!-- Обновление / статус -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="Обновить список" Width="120" Click="PrintAllButton_Click"/>
+            <TextBlock x:Name="StatusTextBlock" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="DarkGreen"/>
+        </StackPanel>
+
+        <!-- Список сотрудников -->
+        <ListBox x:Name="EmployeesListBox" Grid.Row="3"/>
+    </Grid>
+</Window>

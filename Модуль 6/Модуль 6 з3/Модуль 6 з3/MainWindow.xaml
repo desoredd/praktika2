@@ -1,0 +1,78 @@
+﻿<Window x:Class="Модуль_6_Задание_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Библиотека" Height="650" Width="922">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Добавление -->
+        <GroupBox Header="Добавление книги" Grid.Row="0" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Название:" VerticalAlignment="Center"/>
+                <TextBox x:Name="AddNameTextBox" Width="100" Margin="5,0,10,0"/>
+                <TextBlock Text="Автор:" VerticalAlignment="Center"/>
+                <TextBox x:Name="AddAuthorTextBox" Width="100" Margin="5,0,10,0"/>
+                <TextBlock Text="Жанр:" VerticalAlignment="Center"/>
+                <TextBox x:Name="AddGenreTextBox" Width="80" Margin="5,0,10,0"/>
+                <TextBlock Text="Год:" VerticalAlignment="Center"/>
+                <TextBox x:Name="AddVpTextBox" Width="50" Margin="5,0,10,0"/>
+                <Button Content="Добавить" Width="80" Click="AddButton_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Удаление и обновление -->
+        <GroupBox Header="Редактирование" Grid.Row="1" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Название (для поиска):" VerticalAlignment="Center"/>
+                <TextBox x:Name="EditNameTextBox" Width="100" Margin="5,0,10,0"/>
+
+                <TextBlock Text="Новый автор:" VerticalAlignment="Center"/>
+                <TextBox x:Name="EditAuthorTextBox" Width="90" Margin="5,0,10,0"/>
+                <TextBlock Text="Новый жанр:" VerticalAlignment="Center"/>
+                <TextBox x:Name="EditGenreTextBox" Width="80" Margin="5,0,10,0"/>
+                <TextBlock Text="Новый год:" VerticalAlignment="Center"/>
+                <TextBox x:Name="EditVpTextBox" Width="50" Margin="5,0,10,0"/>
+
+                <Button Content="Обновить" Width="80" Margin="0,0,5,0" Click="UpdateButton_Click"/>
+                <Button Content="Удалить" Width="70" Click="RemoveButton_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Фильтрация -->
+        <GroupBox Header="Фильтрация" Grid.Row="2" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="По названию:" VerticalAlignment="Center"/>
+                <TextBox x:Name="FilterNameTextBox" Width="80" Margin="5,0,5,0"/>
+                <Button Content="Найти" Width="50" Margin="0,0,10,0" Click="FilterByName_Click"/>
+
+                <TextBlock Text="По автору:" VerticalAlignment="Center"/>
+                <TextBox x:Name="FilterAuthorTextBox" Width="80" Margin="5,0,5,0"/>
+                <Button Content="Найти" Width="50" Margin="0,0,10,0" Click="FilterByAuthor_Click"/>
+
+                <TextBlock Text="По жанру:" VerticalAlignment="Center"/>
+                <TextBox x:Name="FilterGenreTextBox" Width="70" Margin="5,0,5,0"/>
+                <Button Content="Найти" Width="50" Margin="0,0,10,0" Click="FilterByGenre_Click"/>
+
+                <TextBlock Text="По году:" VerticalAlignment="Center"/>
+                <TextBox x:Name="FilterVpTextBox" Width="50" Margin="5,0,5,0"/>
+                <Button Content="Найти" Width="50" Click="FilterByVp_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Кнопка сброса и статус -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="Показать все книги" Width="150" Click="PrintAllButton_Click"/>
+            <TextBlock x:Name="StatusTextBlock" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="DarkGreen"/>
+        </StackPanel>
+
+        <!-- Список -->
+        <ListBox x:Name="BooksListBox" Grid.Row="5"/>
+    </Grid>
+</Window>
